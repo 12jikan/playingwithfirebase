@@ -21,12 +21,12 @@ export class AppComponent {
   constructor( private adb: AngularFireDatabase, afs: AngularFirestore ) {
 
     // using adb.list() to get the obeservable and subscribe to courses collection
-    adb.list('/courses').valueChanges().subscribe( courses => {
-      this.courses = courses;
-    });
+    // adb.list('/courses').valueChanges().subscribe( courses => {
+    //   this.courses = courses;
+    // });
 
     // as you can see for the cloud service you have to use afs.collection() instead of list()
-    afs.collection('/courses').valueChanges().subscribe( courses => {
+    afs.collection('courses').valueChanges().subscribe( courses => {
 
       // sets to this.courses pretty obvious in itself no explanation really needed
       this.courses = courses;

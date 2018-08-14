@@ -1,6 +1,8 @@
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
+import { AngularFirestoreModule } from '../../node_modules/angularfire2/firestore';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 
@@ -16,7 +18,8 @@ import { fromEventPattern } from '../../node_modules/rxjs';
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
-      AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
